@@ -232,6 +232,3 @@ Feedstock Maintainers
 * [@anthonyhtyao](https://github.com/anthonyhtyao/)
 * [@s-will](https://github.com/s-will/)
 
-
-<!-- dummy commit to enable rerendering -->
-
