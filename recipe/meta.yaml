@@ -14,6 +14,7 @@ build:
   script:
     - export CMAKE_GENERATOR="Ninja"        # [unix]
     - set "CMAKE_GENERATOR=Ninja"           # [win]
+    - set "CMAKE_GENERATOR_PLATFORM="       # [win]
     - "{{ PYTHON }} -m pip install . -vvv"
 
 requirements:
