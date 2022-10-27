@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7396e35c57472380ced0f6a1e73a40a36469907bd0927105631e43b9a7c2c085
+  sha256: 1315076d2f640f2a56af00c3cab27f09248965cc38161f26633348ffd293df14
 
 build:
   number: 2
@@ -22,7 +22,7 @@ requirements:
     - pybind11
     - boost
     - python
-    - pip
+    - pip !=22.1.0
   run:
     - python
     - networkx >=2
