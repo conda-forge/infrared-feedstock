@@ -11,10 +11,9 @@ source:
 
 build:
   number: 2
-  script:
-    - export CMAKE_GENERATOR="Ninja"        # [unix]
-    - set "CMAKE_GENERATOR=Ninja"           # [win]
-    - "{{ PYTHON }} -m pip install . -vvv"
+  script_env:
+    - CMAKE_GENERATOR="Ninja"
+  script: "{{ PYTHON }} -m pip install . -vvv"
 
 requirements:
   build:
