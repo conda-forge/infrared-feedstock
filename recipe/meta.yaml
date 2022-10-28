@@ -10,15 +10,19 @@ source:
   sha256: 1315076d2f640f2a56af00c3cab27f09248965cc38161f26633348ffd293df14
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vvv"
+  number: 3
+  script:
+    - export CMAKE_GENERATOR="Ninja"        # [unix]
+    - set "CMAKE_GENERATOR=Ninja"           # [win]
+    - set "CMAKE_GENERATOR_PLATFORM="       # [win]
+    - set "CMAKE_GENERATOR_TOOLSET="        # [win]
+    - "{{ PYTHON }} -m pip install . -vvv"
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
-    - make
   host:
     - pybind11
     - boost
