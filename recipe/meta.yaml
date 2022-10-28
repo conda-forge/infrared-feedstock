@@ -11,14 +11,18 @@ source:
 
 build:
   number: 3
-  script: "{{ PYTHON }} -m pip install . -vvv"
+  script:
+    - export CMAKE_GENERATOR="Ninja"        # [unix]
+    - set "CMAKE_GENERATOR=Ninja"           # [win]
+    - set "CMAKE_GENERATOR_PLATFORM="       # [win]
+    - set "CMAKE_GENERATOR_TOOLSET="        # [win]
+    - "{{ PYTHON }} -m pip install . -vvv"
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
-    - make
   host:
     - pybind11
     - boost
