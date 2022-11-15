@@ -1,5 +1,5 @@
 {% set name = "Infrared" %}
-{% set version = "v1.0b" %}
+{% set version = "v1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1315076d2f640f2a56af00c3cab27f09248965cc38161f26633348ffd293df14
+  sha256: 034768b2841f93f18ea08e2bf7da5a45550dce40212ec88c251b8e6b8a0a89e1
 
 build:
-  number: 4
+  number: 0
   script:
     - export CMAKE_GENERATOR="Ninja"        # [unix]
     - set "CMAKE_GENERATOR=Ninja"           # [win]
