@@ -1,12 +1,12 @@
 {% set name = "Infrared" %}
-{% set version = "v1.1" %}
+{% set version = "1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: 034768b2841f93f18ea08e2bf7da5a45550dce40212ec88c251b8e6b8a0a89e1
 
 build:
