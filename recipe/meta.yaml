@@ -14,10 +14,12 @@ build:
   script:
     - export CMAKE_GENERATOR="Ninja"        # [unix]
     - export CMAKE_CXX_STANDARD="17"        # [osx]
+    - export CXXFLAGS="-std=c++17"          # [osx]
     - set "CMAKE_GENERATOR=Ninja"           # [win]
     - set "CMAKE_GENERATOR_PLATFORM="       # [win]
     - set "CMAKE_GENERATOR_TOOLSET="        # [win]
-    - set "CMAKE_CXX_STANDARD=17"        # [win]
+    - set "CMAKE_CXX_STANDARD=17"           # [win]
+    - set "CXXFLAGS=/std:c++17"             # [win]
     - "{{ PYTHON }} -m pip install . -vvv"
 
 requirements:
