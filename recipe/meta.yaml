@@ -1,21 +1,25 @@
 {% set name = "Infrared" %}
-{% set version = "v1.0" %}
+{% set version = "1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3a7869dde779fd41f65cc9baca724201d0a76d2fe74726e55a933ec9fe6f4594
+  url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
+  sha256: 034768b2841f93f18ea08e2bf7da5a45550dce40212ec88c251b8e6b8a0a89e1
 
 build:
   number: 0
   script:
     - export CMAKE_GENERATOR="Ninja"        # [unix]
+    - export CMAKE_CXX_STANDARD="17"        # [osx]
+    - export CXXFLAGS="-std=c++17"          # [osx]
     - set "CMAKE_GENERATOR=Ninja"           # [win]
     - set "CMAKE_GENERATOR_PLATFORM="       # [win]
     - set "CMAKE_GENERATOR_TOOLSET="        # [win]
+    - set "CMAKE_CXX_STANDARD=17"           # [win]
+    - set "CXXFLAGS=/std:c++17"             # [win]
     - "{{ PYTHON }} -m pip install . -vvv"
 
 requirements:
