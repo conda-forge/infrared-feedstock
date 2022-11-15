@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 727b1b61676b1e49817d81ae90fa29f7b9ac1b1d7bb44f690fc6600427f46f5d
+  sha256: 3a7869dde779fd41f65cc9baca724201d0a76d2fe74726e55a933ec9fe6f4594
 
 build:
   number: 0
