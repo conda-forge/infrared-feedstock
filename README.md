@@ -7,11 +7,11 @@ Home: https://gitlab.inria.fr/amibio/Infrared
 
 Package license: GPL-3.0-only
 
-Summary: A generic C++/Python hybrid library for efficient (fixed-parameter tractable) Boltzmann sampling
+Summary: A declarative framework for tree decomposition powered optimization and Boltzmann sampling
 
 Development: https://gitlab.inria.fr/amibio/Infrared
 
-Documentation: https://www.lix.polytechnique.fr/~will/Software/Infrared/Doc/index.html
+Documentation: https://www.lix.polytechnique.fr/~will/Software/Infrared
 
 Infrared allows specifying problems declaratively, which are then
 automatically solved by tree decomposition based efficient algorithms.
