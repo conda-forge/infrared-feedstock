@@ -7,17 +7,21 @@ Home: https://gitlab.inria.fr/amibio/Infrared
 
 Package license: GPL-3.0-only
 
-Summary: A generic C++/Python hybrid library for efficient (fixed-parameter tractable) Boltzmann sampling
+Summary: A declarative framework for tree decomposition powered optimization and Boltzmann sampling
 
 Development: https://gitlab.inria.fr/amibio/Infrared
 
-Documentation: https://www.lix.polytechnique.fr/~will/Software/Infrared/Doc/index.html
+Documentation: https://www.lix.polytechnique.fr/~will/Software/Infrared
 
-Infrared provides a fast and flexible C++ engine that evaluates a
-constraint network consisting of variables, multi-ary functions, and
-multi-ary constraints. Functions and constraints are C++ or Python
-objects, where new functions and constraints are easily added in C++
-or in Python
+Infrared allows specifying problems declaratively, which are then
+automatically solved by tree decomposition based efficient algorithms.
+It is therefore well suited for rapid prototyping and development of
+methods that benefit from such techniques. Infrared's
+solvers can either optimize or perform Boltzmann sampling based on defined
+features.  Problems are specified using a modeling
+interface in Python, which also supports the definition of specific
+constraints, functions, and features.  Infrared implements a fast and
+space efficient C++ engine that evaluates the constraint networks.
 
 
 Current build status
