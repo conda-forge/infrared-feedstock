@@ -21,7 +21,7 @@ solvers can either optimize or perform Boltzmann sampling based on defined
 features.  Problems are specified using a modeling
 interface in Python, which also supports the definition of specific
 constraints, functions, and features.  Infrared implements a fast and
-space efficient C++ engine that evaluates the constraint networks. 
+space efficient C++ engine that evaluates the constraint networks.
 
 
 Current build status
