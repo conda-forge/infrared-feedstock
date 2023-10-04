@@ -32,7 +32,7 @@ requirements:
     - ninja
   host:
     - pybind11
-    - libboost-python-devel
+    - libboost-headers
     - python
     - pip !=22.1.0
   run:
