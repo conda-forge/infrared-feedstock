@@ -10,7 +10,7 @@ source:
   sha256: caf7f8887fb6dd0a0bddff9fa1c128579174fe4a99b885b4312bbccdab41d169
 
 build:
-  number: 1
+  number: 0
   script:
     - export CMAKE_GENERATOR="Ninja"        # [unix]
     - export CMAKE_CXX_STANDARD="17"        # [osx]
