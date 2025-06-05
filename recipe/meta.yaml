@@ -30,13 +30,13 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
+    - {{ stdlib("c") }}
   host:
     - pybind11
-    - python
+    - python >=3.8,<=3.12
     - pip !=22.1.0
-    - {{ stdlib("c") }}
   run:
-    - python
+    - python >=3.8,<=3.12
     - networkx >=2
     - treedecomp
 
