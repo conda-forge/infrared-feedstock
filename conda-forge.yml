@@ -8,7 +8,6 @@ github:
   tooling_branch_name: main
 test: native_and_emulated
 python:
-  - 3.7
   - 3.8
   - 3.9
   - 3.10
