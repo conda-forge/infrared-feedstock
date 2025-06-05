@@ -30,6 +30,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - ninja
+    - {{ stdlib("c") }}
   host:
     - pybind11
     - python
