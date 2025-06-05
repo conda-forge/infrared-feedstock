@@ -33,10 +33,10 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - pybind11
-    - python >=3.8,<=3.12
+    - python
     - pip !=22.1.0
   run:
-    - python >=3.8,<=3.12
+    - python
     - networkx >=2
     - treedecomp
 
