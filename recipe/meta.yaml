@@ -35,6 +35,7 @@ requirements:
     - pybind11
     - python
     - pip !=22.1.0
+    - setuptools
   run:
     - python
     - networkx >=2
