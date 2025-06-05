@@ -1,5 +1,5 @@
 {% set name = "Infrared" %}
-{% set version = "1.2" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 45c845c7bbdcbac37c40569742d5113dd9f9b755cfacc8ab60983a9b2942d768
+  sha256: 43a7822c4b5c0897fbd47d8f0bb89a62cb1c6072493b03496132415315c23b86
 
 build:
-  number: 5
+  number: 2
   script:
     - export CMAKE_GENERATOR="Ninja"        # [unix]
     - export CMAKE_CXX_STANDARD="17"        # [osx]
@@ -28,12 +28,14 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake >=3.5
     - ninja
+    - {{ stdlib("c") }}
   host:
     - pybind11
     - python
     - pip !=22.1.0
+    - setuptools
   run:
     - python
     - networkx >=2
@@ -59,7 +61,7 @@ about:
     interface in Python, which also supports the definition of specific
     constraints, functions, and features.  Infrared implements a fast and
     space efficient C++ engine that evaluates the constraint networks.
-  doc_url: https://www.lix.polytechnique.fr/~will/Software/Infrared
+  doc_url: https://amibio.gitlabpages.inria.fr/infrared/
   dev_url: https://gitlab.inria.fr/amibio/Infrared
 
 extra:
