@@ -3,7 +3,7 @@
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://gitlab.inria.fr/amibio/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
